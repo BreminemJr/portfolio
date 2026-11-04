@@ -240,7 +240,86 @@ html:not(.has-js) .name-wrap:focus-within .overlay {
   width: 330px;
 }
 
-/* --- placeholder tab pages ------------------------------------ */
+/* --- mitt skip er lastet med: paper-boat menu -----------------
+   Inspired by Figma frame 13:193: a white paper boat on deep blue
+   water, with a Telenor menu placeholder placed in the hull. */
+
+.boat-section {
+  margin-top: 156px;
+}
+
+.boat-scene {
+  position: relative;
+  width: 100%;
+  max-width: 790px;
+  aspect-ratio: 395 / 351;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #064e7f;
+  container-type: inline-size;
+}
+
+.boat-illustration {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.boat-menu {
+  position: absolute;
+  left: 52%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.boat-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0px, 0.13cqw, 1px);
+  min-width: clamp(30px, 8.6cqw, 68px);
+  padding: clamp(2px, 0.5cqw, 4px) clamp(3px, 0.8cqw, 6px);
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #007fa8;
+  font: inherit;
+  cursor: default;
+  transition: transform 140ms ease, filter 140ms ease;
+}
+
+.boat-menu-item[aria-disabled="true"] {
+  opacity: 1;
+}
+
+.boat-menu-item:hover,
+.boat-menu-item:focus-visible {
+  transform: scale(1.08);
+  filter: drop-shadow(0 1px 3px rgb(0 47 80 / 22%));
+}
+
+.boat-menu-item:focus-visible {
+  outline: 2px solid #008bb6;
+  outline-offset: 2px;
+}
+
+.telenor-mark {
+  display: block;
+  width: clamp(18px, 4.8cqw, 38px);
+  height: clamp(18px, 4.8cqw, 38px);
+  overflow: visible;
+  fill: #00bdf2;
+}
+
+.boat-menu-item span {
+  color: #006f96;
+  font-size: clamp(8px, 1.4cqw, 11px);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+}
 
 .placeholder {
   margin-top: 156px;
@@ -256,6 +335,13 @@ html:not(.has-js) .name-wrap:focus-within .overlay {
   margin: 0;
   font-size: 16px;
   letter-spacing: 0.8px;
+}
+
+@media (max-width: 900px) {
+  .boat-section,
+  .placeholder {
+    margin-top: 56px;
+  }
 }
 
 /* --- responsive ------------------------------------------------ */

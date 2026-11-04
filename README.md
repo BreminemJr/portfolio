@@ -9,22 +9,24 @@ Live: <https://breminemjr.github.io/portfolio/>
 Three pages that share the same intro header and nav tabs — the current tab is marked with `aria-current="page"` and underlined. The header and tabs stay identical on every page; only the panel below the tabs changes.
 
 - `index.html` — **Curriculum vitae**: intro block + CV table
-- `mitt-skip-er-lastet-med.html` — **mitt skip er lastet med**: placeholder, design pending
+- `mitt-skip-er-lastet-med.html` — **mitt skip er lastet med**: paper-boat illustration with a Telenor menu placeholder
 - `bare-for-morro.html` — **Bare for morro**: placeholder, design pending
 - `styles.css` — all styling
+- `assets/paper-boat.svg` — custom paper-boat-on-water illustration, based on Figma frame `13:193`
 - `favicon.svg` — icon
 
 The layout mirrors the Figma frame: a 790 px centred column, a 456 px intro block offset 167 px, and a CV grid of `101 / 130 / 130 / 330` px with 33 px gutters. Type is [42dot Sans](https://fonts.google.com/specimen/42dot+Sans), 16 px with 0.8 px letter-spacing in the CV, 20 px for the intro and nav. Rules are 0.5 px hairlines.
 
-On the tab pages, which have no design yet, the intro and tabs are followed by a placeholder panel that starts at the same y as the CV table.
+The intro and tabs stay identical across the pages; each page's content starts below the tabs. The boat page has a cyan Telenor mark inside the paper boat as a menu item placeholder. It is intentionally not linked anywhere yet.
 
 ## Editing content
 
-Everything lives in `index.html`:
+Page content lives in its respective HTML file:
 
 - Intro: `Portefølje`, name, the "Jeg er … designer" line, current role and the master note
 - CV rows: each `.cv-row` has four cells — `.cv-when` (Når?), `.cv-where` (Hvor?), `.cv-what` (Hva?), `.cv-how` (Hvordan?)
-- `#prosjekter` and `#bare-for-morro` are placeholder sections behind the two nav items
+- `mitt-skip-er-lastet-med.html` holds the boat illustration and placeholder menu item
+- `bare-for-morro.html` is a placeholder until its design is ready
 
 Still placeholder from the frame: every date reads `Mars 26- dd.` and all five `Hvordan?` cells repeat the same sentence.
 
@@ -57,6 +59,6 @@ git push
 
 ## Notes
 
-- No JavaScript, no build step, no dependencies.
+- No build step or dependencies; a small vanilla JavaScript file powers the pointer-following "Om meg" card.
 - Responsive: below 900 px the intro un-indents, the nav wraps and the CV rows stack into single-column blocks with the heading row hidden.
 - `prefers-reduced-motion` disables smooth scrolling.
