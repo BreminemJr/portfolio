@@ -1,35 +1,48 @@
 # Sanne Bautz — Portfolio
 
-A simple single-page portfolio with hand-drawn type, built with plain HTML and CSS.
+Single-page portfolio built from the Figma frame **"Portfolio homepage"** (node `2:4`), plain HTML and CSS with no build step.
 
-## Open it
+Live: <https://breminemjr.github.io/portfolio/>
 
-The page is currently being served at **http://localhost:8765**.
+## Structure
 
-Or open `index.html` directly in a browser.
+- `index.html` — intro block, nav, CV table, placeholder sections
+- `styles.css` — all styling
+- `favicon.svg` — icon
 
-To serve it again later:
+The layout mirrors the Figma frame: a 790 px centred column, a 456 px intro block offset 167 px, and a CV grid of `101 / 130 / 130 / 330` px with 33 px gutters. Type is [42dot Sans](https://fonts.google.com/specimen/42dot+Sans), 16 px with 0.8 px letter-spacing in the CV, 20 px for the intro and nav. Rules are 0.5 px hairlines.
+
+## Editing content
+
+Everything lives in `index.html`:
+
+- Intro: `Portefølje`, name, the "Jeg er … designer" line, current role and the master note
+- CV rows: each `.cv-row` has four cells — `.cv-when` (Når?), `.cv-where` (Hvor?), `.cv-what` (Hva?), `.cv-how` (Hvordan?)
+- `#prosjekter` and `#bare-for-morro` are placeholder sections behind the two nav items
+
+Still placeholder from the frame: every date reads `Mars 26- dd.` and all five `Hvordan?` cells repeat the same sentence.
+
+## Local preview
 
 ```bash
 cd ~/portfolio
 python3 -m http.server 8765
 ```
 
-## Make it yours
+Then open <http://localhost:8765>.
 
-Everything lives in two files:
+## Deploying
 
-- `index.html` — the headline, intro, project list and contact details
-- `styles.css` — colours, type, layout and the project artwork
+Push to `main` — GitHub Pages rebuilds automatically (branch deploy, root folder, ~30–60 s):
 
-A few things worth replacing:
-
-- Search for `Sanne Bautz` and `hello@sannebautz.com`
-- Update the four project titles, disciplines and years
-- Swap the CSS-drawn project thumbnails for your own images if you prefer
+```bash
+git add -A
+git commit -m "Update content"
+git push
+```
 
 ## Notes
 
-- The headline and intro use [Caveat](https://fonts.google.com/specimen/Caveat) and [Kalam](https://fonts.google.com/specimen/Kalam), with handwritten system fallbacks.
-- The project thumbnails are built in CSS, so there are no image files to manage.
-- No JavaScript, no build step.
+- No JavaScript, no build step, no dependencies.
+- Responsive: below 900 px the intro un-indents, the nav wraps and the CV rows stack into single-column blocks with the heading row hidden.
+- `prefers-reduced-motion` disables smooth scrolling.
