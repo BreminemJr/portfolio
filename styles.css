@@ -173,21 +173,23 @@ body {
   width: 330px;
 }
 
-/* --- placeholder sections for the two nav items ---------------- */
+/* --- placeholder tab pages ------------------------------------ */
 
-.stub {
-  margin-top: 120px;
-  padding-top: var(--gap-row);
-  border-top: var(--hairline) solid var(--ink);
+.page > .nav:first-child {
+  margin-top: 0;
 }
 
-.stub h2 {
+.placeholder {
+  margin-top: 156px;
+}
+
+.placeholder h1 {
   margin: 0 0 8px;
   font-size: 20px;
   font-weight: 400;
 }
 
-.stub p {
+.placeholder p {
   margin: 0;
   font-size: 16px;
   letter-spacing: 0.8px;
@@ -239,8 +241,8 @@ body {
     margin-top: 6px;
   }
 
-  .stub {
-    margin-top: 72px;
+  .placeholder {
+    margin-top: 56px;
   }
 }
 
