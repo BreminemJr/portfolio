@@ -215,10 +215,6 @@ body {
 
 /* --- placeholder tab pages ------------------------------------ */
 
-.page > .nav:first-child {
-  margin-top: 0;
-}
-
 .placeholder {
   margin-top: 156px;
 }

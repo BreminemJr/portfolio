@@ -6,7 +6,7 @@ Live: <https://breminemjr.github.io/portfolio/>
 
 ## Structure
 
-Three pages that share the nav as tabs — the current tab is marked with `aria-current="page"` and underlined.
+Three pages that share the same intro header and nav tabs — the current tab is marked with `aria-current="page"` and underlined. The header and tabs stay identical on every page; only the panel below the tabs changes.
 
 - `index.html` — **Curriculum vitae**: intro block + CV table
 - `prosjekter.html` — **Prosjekter**: placeholder, design pending
@@ -16,7 +16,7 @@ Three pages that share the nav as tabs — the current tab is marked with `aria-
 
 The layout mirrors the Figma frame: a 790 px centred column, a 456 px intro block offset 167 px, and a CV grid of `101 / 130 / 130 / 330` px with 33 px gutters. Type is [42dot Sans](https://fonts.google.com/specimen/42dot+Sans), 16 px with 0.8 px letter-spacing in the CV, 20 px for the intro and nav. Rules are 0.5 px hairlines.
 
-On the tab pages, which have no design yet, the nav sits at the top of the column and the placeholder text follows.
+On the tab pages, which have no design yet, the intro and tabs are followed by a placeholder panel that starts at the same y as the CV table.
 
 ## Editing content
 
