@@ -78,6 +78,7 @@ body {
 
 .name-wrap {
   position: relative;
+  align-self: flex-start; /* hover area = the name text only, not the full 456px column */
 }
 
 .overlay {
@@ -93,7 +94,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.8px;
-  line-height: 1.2;
+  line-height: 19px;
   white-space: pre-wrap;
   opacity: 0;
   visibility: hidden;
