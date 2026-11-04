@@ -30,7 +30,9 @@ Still placeholder from the frame: every date reads `Mars 26- dd.` and all five `
 
 ## Om meg overlay
 
-Hovering — or keyboard-focusing — the name in the intro opens the **"Om meg overlay"** frame (node `2:117`): a 218 × 248 `#dedede` panel with 10 px padding, positioned 157 px right of and 12 px above the name's top edge. Markup is `.name-wrap` → `.intro-name` + `aside.overlay[role="tooltip"]`, revealed with `.name-wrap:hover` / `.name-wrap:focus-within`. Below 900 px it re-anchors under the name instead of beside it. The heading carries `tabindex="0"` so the overlay is reachable from the keyboard.
+Hovering — or keyboard-focusing — the name in the intro opens frame **12** (`10:188`): a 223 × 308 card made of the portrait (`89 × 79`, right-aligned) sitting directly above the `223 × 229` `#dedede` box. The box keeps the placement of node `2:117` — 157 px right of and 12 px above the name's top edge — so the portrait rides above it.
+
+Markup is `.name-wrap` → `.intro-name` + `aside.overlay[role="tooltip"]` containing `img.overlay-media` and `.overlay-box`, revealed with `.name-wrap:hover` / `.name-wrap:focus-within`. Below 900 px the card re-anchors under the name instead of beside it. The heading carries `tabindex="0"` so the card is reachable from the keyboard. Portrait asset: `assets/portrait-om-meg.png` (178 × 158, exported 2× from Figma).
 
 ## Local preview
 

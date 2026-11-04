@@ -72,9 +72,11 @@ body {
   font-size: 20px;
 }
 
-/* --- name + "Om meg" hover overlay -----------------------------
-   Overlay is node 2:117: 218 x 248 at (649, 259) in the frame,
-   i.e. 157px right of and 12px above the name. */
+/* --- name + "Om meg" hover card --------------------------------
+   Card is frame 12 (10:188): 223 x 308, made of the portrait
+   89 x 79 right-aligned above the 223 x 229 #dedede box.
+   The box keeps the position node 2:117 had: 157px right of and
+   12px above the name, so the portrait rides directly above it. */
 
 .name-wrap {
   position: relative;
@@ -84,11 +86,24 @@ body {
 .overlay {
   position: absolute;
   left: 157px;
-  top: -12px;
+  top: -91px; /* 79px portrait + 12px offset */
   z-index: 20;
-  width: 218px;
-  min-height: 248px;
+  width: 223px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 120ms ease, visibility 120ms ease;
+}
+
+.overlay-media {
+  display: block;
+  width: 89px;
+  height: 79px;
+  margin-left: auto;
+}
+
+.overlay-box {
   padding: 10px;
+  min-height: 229px;
   background: #dedede;
   color: var(--ink);
   font-size: 16px;
@@ -96,9 +111,6 @@ body {
   letter-spacing: 0.8px;
   line-height: 19px;
   white-space: pre-wrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 120ms ease, visibility 120ms ease;
 }
 
 .name-wrap:hover .overlay,
@@ -247,7 +259,7 @@ body {
   .overlay {
     left: 0;
     top: calc(100% + 8px);
-    width: min(218px, 100%);
+    width: min(223px, 100%);
   }
 
   .nav {
