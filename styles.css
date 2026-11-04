@@ -115,7 +115,7 @@ html:not(.has-js) .name-wrap:focus-within .overlay {
 .overlay-media {
   position: absolute;
   right: 0;
-  top: -40px; /* straddles the box edge: 40px above, 39px over it */
+  top: -33px; /* anchored to the box: 33px lip above, 46px lying on it */
   z-index: 1;
   width: 89px;
   height: 79px;
