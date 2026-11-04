@@ -9,7 +9,7 @@ Live: <https://breminemjr.github.io/portfolio/>
 Three pages that share the same intro header and nav tabs — the current tab is marked with `aria-current="page"` and underlined. The header and tabs stay identical on every page; only the panel below the tabs changes.
 
 - `index.html` — **Curriculum vitae**: intro block + CV table
-- `prosjekter.html` — **Prosjekter**: placeholder, design pending
+- `mitt-skip-er-lastet-med.html` — **mitt skip er lastet med**: placeholder, design pending
 - `bare-for-morro.html` — **Bare for morro**: placeholder, design pending
 - `styles.css` — all styling
 - `favicon.svg` — icon
