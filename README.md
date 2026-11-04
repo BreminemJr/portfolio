@@ -28,6 +28,10 @@ Everything lives in `index.html`:
 
 Still placeholder from the frame: every date reads `Mars 26- dd.` and all five `Hvordan?` cells repeat the same sentence.
 
+## Om meg overlay
+
+Hovering — or keyboard-focusing — the name in the intro opens the **"Om meg overlay"** frame (node `2:117`): a 218 × 248 `#dedede` panel with 10 px padding, positioned 157 px right of and 12 px above the name's top edge. Markup is `.name-wrap` → `.intro-name` + `aside.overlay[role="tooltip"]`, revealed with `.name-wrap:hover` / `.name-wrap:focus-within`. Below 900 px it re-anchors under the name instead of beside it. The heading carries `tabindex="0"` so the overlay is reachable from the keyboard.
+
 ## Local preview
 
 ```bash
